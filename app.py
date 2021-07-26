@@ -43,7 +43,7 @@ def predict():
     predictions = np.exp(predictions)
     
 
-    prediction_text = 'house price is predicted to be :  '+str(predictions)
+    prediction_text = 'house price is predicted to be :  '+str(predictions)+'cr'
 
 
     return render_template('index.html', prediction_text=prediction_text)
