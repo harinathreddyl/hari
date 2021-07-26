@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>House price prediction city wise</h1>
+
+<p>The select element is used to create a drop-down list.</p>
+<div style="background-image: url('https://akm-img-a-in.tosshub.com/businesstoday/images/story/201908/house_prop_660_080719010504.jpg');">
+<form action="/predict" method="POST">
+  <label for="city	">Choose a city:</label>
+  <select name="city" id="city ">
+    <option value="mumbai">Mumbai</option>
+    <option value="bangalore">Bangalore</option>
+    <option value="pune">Pune</option>
+    <option value="Gurgaon">Gurgaoon</option>
+    <option value="hyderabad">Hyderabad</option>
+</select>
+<br></br>
+  <label for="type_of_house	">Type_of_a_house:</label>
+  <select name="type_of_house"id="type_of_house	">
+    <option value="residentialapartment">Resedential_apartment</option>
+    <option value="independenthouse">Independent_house</option>
+    <option value="residentialland/plot">Resenditial_land/plot</option>
+    <option value="(rk)studioapartment">(rk)studioapartment</option>
+    <option value="independentbuilderfloor">independentbuilderfloor</option>
+    <option value="residentialproperty">Resedentialproperty</option>
+    <option value="farmhouse">Farmhouse</option>
+    <option value="servicedapartment">Servicedepartment</option>
+ </select>
+ <br></br>
+  <label for="Status_of_house">Status_of_a_house:</label>
+  <select name="Status_of_house"id="Status_of_house">
+    <option value="READY TO MOVE">Ready_to_move</option>
+    <option value="UNDER CONSTRUCTION">Underconstruction</option>
+ </select>
+ <br></br>
+  <label for="type_of_area">Type_of_area:</label>
+  <select name="type_of_area"id="type_of_area">
+    <option value=" built-up area"> built-up area</option>
+    <option value=" plot area">Plot_area</option>
+    <option value=" carpet area"> carpet area/plot</option>
+    <option value=" super built-up area"> super built-up area</option>
+</select>
+ <br></br>
+  <label for="resale">Resale:</label>
+  <select name="resale"id="resale">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+ </select>
+ <br></br>
+  <label for="registration">Registration:</label>
+  <select name="registration"id="registration">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+ </select>
+ <br></br>
+ <label for="bedrooms">Bedrooms:</label>
+ <input name="bedrooms"type="number" id="bedrooms" min="1" max="48" />
+ <br></br>
+   <label for="bathrooms">Bathrooms:</label>
+   <input name="bathrooms"type="number" id="bathrooms" min="1" max="48" />
+ <br></br>
+   <label for="area_sq.ft">Area_sq.ft:</label>
+   <input name="area_sq.ft" type="number" id="area_sq.ft" min="1.0" max="14854.0" />
+ <br></br>
+   <input type="submit" value="Submit">
+ </form> 
+ <h1 style="color:red"><c> {{ prediction_text }}</h1>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
